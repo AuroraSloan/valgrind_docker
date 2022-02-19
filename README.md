@@ -17,9 +17,9 @@ docker build -t val .
 
 Run the container
 
--it will enter you into the container dirctly from the terminal
+`-it` will enter you into the container dirctly from the terminal
 
--v will allow you to mount a shared directory your local workspace and the container<br>
+`-v` will allow you to mount a shared directory your local workspace and the container<br>
 local:container
 
 ```bash
