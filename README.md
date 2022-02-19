@@ -8,6 +8,7 @@ clone this repositroy
 ```bash
 https://github.com/AuroraSloan/valgrind_docker
 ```
+Move the files you want to check into the srcs directory
 
 Build the image
 
