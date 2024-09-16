@@ -1,32 +1,28 @@
 # valgrind_docker
 
-Simplest docker container for using valgrind
+Simplest docker container for using valgrind<br>
 valgrindを使うための最もシンプルなドッカーコンテナ
 
 ## Usage 使い方
 
-clone this repository.
+clone this repository.<br>
 このリポジトリをクローンします。
 ```bash
 https://github.com/AuroraSloan/valgrind_docker
 ```
-Create a local directory that will contain your project. 
-Copy your project to the directory you created.
-This directory will be copied to the container.
-In this example I am using a directory called 'src'.
-ローカルでプロジェクトを格納するディレクトリを作成します。
-作成したディレクトリにプロジェクトをコピーします。
-このディレクトリはコンテナにコピーされます。
-この例では、「src」というディレクトリを使用しています。
+Copy your project to the 'srcs' directory.<br>
+This directory will be mounted to the container.<br>
+プロジェクトを「srcs」ディレクトリにコピーします。
+このディレクトリはコンテナにマウントされます。
 
-Build the image.
+Build the image.<br>
 イメージを作成します。
 
 ```bash
 docker build -t valgrind_image .
 ```
 
-Run the container.
+Run the container.<br>
 コンテナを実行します。
 
 ```bash
@@ -36,11 +32,11 @@ docker run -it -v /<absolute_path>/srcs:/srcs valgrind_image
 docker run -it -v /<絶対パス>/srcs:/srcs valgrind_image
 ```
 
-`-it` will enter you into the container directly from the terminal.
-`-it` でターミナルから直接コンテナに入ることができます。
+`-it` will enter you into the container directly from the terminal.<br>
+`-it` でターミナルから直接コンテナに入ることができます。<br>
 
 `-v` will allow you to mount a shared directory your local workspace and the container.<br>
-i.e `-v <local path>:<container path>`
+i.e `-v <local path>:<container path>`<br>
 
 `-v` により、ローカル・ワークスペースとコンテナの共有ディレクトリをマウントすることができます。<br>
 例えば `-v <ローカルパス>:<コンテナパス>`
